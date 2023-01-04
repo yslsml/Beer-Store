@@ -1,5 +1,5 @@
 //
-//  Guinness.swift
+//  Carlsberg.swift
 //  BeerStoreApp
 //
 //  Created by Milana Antonova on 4.01.23.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Guinness {
+class Beer {
     
     var name: String
     var price: Double

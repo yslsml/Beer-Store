@@ -12,9 +12,7 @@
 		A9EF0BB329657CD500D59588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF0BB129657CD500D59588 /* Main.storyboard */; };
 		A9EF0BB529657CD600D59588 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9EF0BB429657CD600D59588 /* Assets.xcassets */; };
 		A9EF0BB829657CD600D59588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF0BB629657CD600D59588 /* LaunchScreen.storyboard */; };
-		A9EF0BC029657E0400D59588 /* Guinness.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF0BBF29657E0400D59588 /* Guinness.swift */; };
-		A9EF0BC229657E8300D59588 /* Heineken.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF0BC129657E8300D59588 /* Heineken.swift */; };
-		A9EF0BC429657EAC00D59588 /* Carlsberg.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF0BC329657EAC00D59588 /* Carlsberg.swift */; };
+		A9EF0BC429657EAC00D59588 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF0BC329657EAC00D59588 /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,9 +23,7 @@
 		A9EF0BB429657CD600D59588 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9EF0BB729657CD600D59588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9EF0BB929657CD600D59588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9EF0BBF29657E0400D59588 /* Guinness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guinness.swift; sourceTree = "<group>"; };
-		A9EF0BC129657E8300D59588 /* Heineken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heineken.swift; sourceTree = "<group>"; };
-		A9EF0BC329657EAC00D59588 /* Carlsberg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carlsberg.swift; sourceTree = "<group>"; };
+		A9EF0BC329657EAC00D59588 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +58,7 @@
 			children = (
 				A9EF0BAB29657CD500D59588 /* AppDelegate.swift */,
 				A9EF0BAF29657CD500D59588 /* ViewController.swift */,
-				A9EF0BBF29657E0400D59588 /* Guinness.swift */,
-				A9EF0BC129657E8300D59588 /* Heineken.swift */,
-				A9EF0BC329657EAC00D59588 /* Carlsberg.swift */,
+				A9EF0BC329657EAC00D59588 /* Beer.swift */,
 				A9EF0BB129657CD500D59588 /* Main.storyboard */,
 				A9EF0BB429657CD600D59588 /* Assets.xcassets */,
 				A9EF0BB629657CD600D59588 /* LaunchScreen.storyboard */,
@@ -144,10 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9EF0BC229657E8300D59588 /* Heineken.swift in Sources */,
-				A9EF0BC029657E0400D59588 /* Guinness.swift in Sources */,
 				A9EF0BB029657CD500D59588 /* ViewController.swift in Sources */,
-				A9EF0BC429657EAC00D59588 /* Carlsberg.swift in Sources */,
+				A9EF0BC429657EAC00D59588 /* Beer.swift in Sources */,
 				A9EF0BAC29657CD500D59588 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

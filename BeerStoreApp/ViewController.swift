@@ -90,8 +90,11 @@ class ViewController: UIViewController {
         thirdBeerQuantityLabel.text = "0"
     }
     @IBAction func startDayButtonPressed(_ sender: UIButton) {
+        Manager.shared.startDay()
+        messageLabel.text = "The new day is stated"
     }
     @IBAction func endDayButtonPressed(_ sender: UIButton) {
+        messageLabel.text = "Total income: \(Manager.shared.totalIncome)$"
     }
 
 }

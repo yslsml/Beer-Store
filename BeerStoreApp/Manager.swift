@@ -27,7 +27,7 @@ class Manager {
     }
     
     func sell() {
-        var totalSum = getTotalSumOfShopping()
+        let totalSum = getTotalSumOfShopping()
         for beer in beers {
             sellBeer(beer)
         }
@@ -44,6 +44,14 @@ class Manager {
             totalSum += getTotalSumForBeer(beer)
         }
         return totalSum
+    }
+    
+    func startDay() {
+        for beer in beers {
+            beer.remainingVolume = 100
+            beer.sellQuantity = 0
+        }
+        totalIncome = 0
     }
     
 }

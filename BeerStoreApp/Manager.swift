@@ -16,11 +16,11 @@ class Manager {
     var totalIncome = 0.0
     
     let beers: [Beer] = [
-            Beer(name: "Heineken", price: 2.5, remainingVolume: 100, sellQuantity: 0),
-            Beer(name: "Carlsberg", price: 2.9, remainingVolume: 100, sellQuantity: 0),
-            Beer(name: "Giunness", price: 3.1, remainingVolume: 100, sellQuantity: 0)
-        ]
-
+        Beer(name: "Heineken", price: 2.5, remainingVolume: 100, sellQuantity: 0),
+        Beer(name: "Carlsberg", price: 2.9, remainingVolume: 100, sellQuantity: 0),
+        Beer(name: "Giunness", price: 3.1, remainingVolume: 100, sellQuantity: 0)
+    ]
+    
     func sellBeer(_ beer: Beer) {
         beer.remainingVolume -= beer.sellQuantity
         beer.sellQuantity = 0
@@ -52,6 +52,20 @@ class Manager {
             beer.sellQuantity = 0
         }
         totalIncome = 0
+    }
+    
+    func addBeer(_ beer: Beer) -> String {
+        if (beer.sellQuantity < beer.remainingVolume) {
+            beer.sellQuantity += 1
+        }
+        return String(beer.sellQuantity)
+    }
+    
+    func subtractBeer(_ beer: Beer) -> String {
+        if (beer.sellQuantity > 0) {
+            beer.sellQuantity -= 1
+        }
+        return String(beer.sellQuantity)
     }
     
 }

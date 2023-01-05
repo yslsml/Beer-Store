@@ -35,51 +35,33 @@ class ViewController: UIViewController {
     //MARK: IBActions
     @IBAction func addFirstBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        if (Manager.shared.beers[0].sellQuantity < Manager.shared.beers[0].remainingVolume) {
-            Manager.shared.beers[0].sellQuantity += 1
-            firstBeerQuantityLabel.text = String(Manager.shared.beers[0].sellQuantity)
-        }
+        firstBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.beers[0])
     }
     @IBAction func addSecondBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        if (Manager.shared.beers[1].sellQuantity < Manager.shared.beers[1].remainingVolume) {
-            Manager.shared.beers[1].sellQuantity += 1
-            secondBeerQuantityLabel.text = String(Manager.shared.beers[1].sellQuantity)
-        }
+        secondBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.beers[1])
     }
     @IBAction func addThirdBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        if (Manager.shared.beers[2].sellQuantity < Manager.shared.beers[2].remainingVolume) {
-            Manager.shared.beers[2].sellQuantity += 1
-            thirdBeerQuantityLabel.text = String(Manager.shared.beers[2].sellQuantity)
-        }
+        thirdBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.beers[2])
     }
     @IBAction func subtractFirstBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        if (Manager.shared.beers[0].sellQuantity > 0) {
-            Manager.shared.beers[0].sellQuantity -= 1
-            firstBeerQuantityLabel.text = String(Manager.shared.beers[0].sellQuantity)
-        }
+        firstBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.beers[0])
     }
     @IBAction func subtractSecondBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        if (Manager.shared.beers[1].sellQuantity > 0) {
-            Manager.shared.beers[1].sellQuantity -= 1
-            secondBeerQuantityLabel.text = String(Manager.shared.beers[1].sellQuantity)
-        }
+        secondBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.beers[1])
     }
     @IBAction func subtractThirdBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        if (Manager.shared.beers[2].sellQuantity > 0) {
-            Manager.shared.beers[2].sellQuantity -= 1
-            thirdBeerQuantityLabel.text = String(Manager.shared.beers[2].sellQuantity)
-        }
+        thirdBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.beers[2])
     }
     @IBAction func sellButtonPressed(_ sender: UIButton) {
-        var firstBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[0])
-        var secondBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[1])
-        var thirdBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[2])
-        var totalSum = Manager.shared.getTotalSumOfShopping()
+        let firstBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[0])
+        let secondBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[1])
+        let thirdBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[2])
+        let totalSum = Manager.shared.getTotalSumOfShopping()
         
         messageLabel.text = "\(Manager.shared.beers[0].name): \(Manager.shared.beers[0].price) * \(Manager.shared.beers[0].sellQuantity) = \(firstBeerTotalSum)$ \n \(Manager.shared.beers[1].name): \(Manager.shared.beers[1].price) * \(Manager.shared.beers[1].sellQuantity) = \(secondBeerTotalSum)$ \n\(Manager.shared.beers[2].name): \(Manager.shared.beers[2].price) * \(Manager.shared.beers[2].sellQuantity) = \(thirdBeerTotalSum)$ \nTotal sum: \(totalSum)$"
         
@@ -91,7 +73,7 @@ class ViewController: UIViewController {
     }
     @IBAction func startDayButtonPressed(_ sender: UIButton) {
         Manager.shared.startDay()
-        messageLabel.text = "The new day is stated"
+        messageLabel.text = "The new day is started"
     }
     @IBAction func endDayButtonPressed(_ sender: UIButton) {
         messageLabel.text = "Total income: \(Manager.shared.totalIncome)$"

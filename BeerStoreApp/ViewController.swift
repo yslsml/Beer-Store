@@ -24,11 +24,9 @@ class ViewController: UIViewController {
         firstBeerLabel.text = Manager.shared.beers[0].name
         secondBeerLabel.text = Manager.shared.beers[1].name
         thirdBeerLabel.text = Manager.shared.beers[2].name
-        
         firstBeerQuantityLabel.text = "0"
         secondBeerQuantityLabel.text = "0"
         thirdBeerQuantityLabel.text = "0"
-        
         messageLabel.text = ""
     }
 
@@ -58,15 +56,8 @@ class ViewController: UIViewController {
         thirdBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.beers[2])
     }
     @IBAction func sellButtonPressed(_ sender: UIButton) {
-        let firstBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[0])
-        let secondBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[1])
-        let thirdBeerTotalSum = Manager.shared.getTotalSumForBeer(Manager.shared.beers[2])
-        let totalSum = Manager.shared.getTotalSumOfShopping()
-        
-        messageLabel.text = "\(Manager.shared.beers[0].name): \(Manager.shared.beers[0].price) * \(Manager.shared.beers[0].sellQuantity) = \(firstBeerTotalSum)$ \n \(Manager.shared.beers[1].name): \(Manager.shared.beers[1].price) * \(Manager.shared.beers[1].sellQuantity) = \(secondBeerTotalSum)$ \n\(Manager.shared.beers[2].name): \(Manager.shared.beers[2].price) * \(Manager.shared.beers[2].sellQuantity) = \(thirdBeerTotalSum)$ \nTotal sum: \(totalSum)$"
-        
+        messageLabel.text = Manager.shared.createMessageLabelText(Manager.shared.beers)
         Manager.shared.sell()
-        
         firstBeerQuantityLabel.text = "0"
         secondBeerQuantityLabel.text = "0"
         thirdBeerQuantityLabel.text = "0"

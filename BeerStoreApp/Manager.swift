@@ -68,4 +68,13 @@ class Manager {
         return String(beer.sellQuantity)
     }
     
+    func createMessageLabelText(_ beers: [Beer]) -> String {
+        var messageLabelText = ""
+        for beer in beers {
+            messageLabelText.append("\(beer.name): \(beer.price) * \(beer.sellQuantity) = \(getTotalSumForBeer(beer))$ \n")
+        }
+        messageLabelText.append("Total sum: \(getTotalSumOfShopping())$")
+        return messageLabelText
+    }
+    
 }

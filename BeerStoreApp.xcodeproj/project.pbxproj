@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A91C51F02969E89400858ADC /* BeerBrand.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C51EF2969E89400858ADC /* BeerBrand.swift */; };
 		A9EF0BAC29657CD500D59588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF0BAB29657CD500D59588 /* AppDelegate.swift */; };
 		A9EF0BB029657CD500D59588 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EF0BAF29657CD500D59588 /* ViewController.swift */; };
 		A9EF0BB329657CD500D59588 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9EF0BB129657CD500D59588 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A91C51EF2969E89400858ADC /* BeerBrand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerBrand.swift; sourceTree = "<group>"; };
 		A9EF0BA829657CD500D59588 /* BeerStoreApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerStoreApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9EF0BAB29657CD500D59588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9EF0BAF29657CD500D59588 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A91C51F12969EA7700858ADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A9EF0BC329657EAC00D59588 /* Beer.swift */,
+				A91C51EF2969E89400858ADC /* BeerBrand.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A9EF0B9F29657CD500D59588 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +69,14 @@
 		A9EF0BAA29657CD500D59588 /* BeerStoreApp */ = {
 			isa = PBXGroup;
 			children = (
+				A91C51F12969EA7700858ADC /* Models */,
 				A9EF0BAB29657CD500D59588 /* AppDelegate.swift */,
 				A9EF0BAF29657CD500D59588 /* ViewController.swift */,
-				A9EF0BC329657EAC00D59588 /* Beer.swift */,
+				A9EF0BC52965838700D59588 /* Manager.swift */,
+				A9EF0BB629657CD600D59588 /* LaunchScreen.storyboard */,
 				A9EF0BB129657CD500D59588 /* Main.storyboard */,
 				A9EF0BB429657CD600D59588 /* Assets.xcassets */,
-				A9EF0BB629657CD600D59588 /* LaunchScreen.storyboard */,
 				A9EF0BB929657CD600D59588 /* Info.plist */,
-				A9EF0BC52965838700D59588 /* Manager.swift */,
 			);
 			path = BeerStoreApp;
 			sourceTree = "<group>";
@@ -145,6 +156,7 @@
 				A9EF0BC429657EAC00D59588 /* Beer.swift in Sources */,
 				A9EF0BAC29657CD500D59588 /* AppDelegate.swift in Sources */,
 				A9EF0BC62965838700D59588 /* Manager.swift in Sources */,
+				A91C51F02969E89400858ADC /* BeerBrand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

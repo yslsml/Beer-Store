@@ -15,11 +15,19 @@ class Manager {
     
     var totalIncome = 0.0
     
-    let beers: [Beer] = [
-        Beer(name: "Heineken", price: 2.5, remainingVolume: 100, sellQuantity: 0),
-        Beer(name: "Carlsberg", price: 2.9, remainingVolume: 100, sellQuantity: 0),
-        Beer(name: "Giunness", price: 3.1, remainingVolume: 100, sellQuantity: 0)
+    private let beers: [Beer] = [
+        Beer(name: BeerBrand.firstBeer.rawValue, price: 2.5, remainingVolume: 100, sellQuantity: 0),
+        Beer(name: BeerBrand.secondBeer.rawValue, price: 2.9, remainingVolume: 100, sellQuantity: 0),
+        Beer(name: BeerBrand.thirdBeer.rawValue, price: 3.1, remainingVolume: 100, sellQuantity: 0)
     ]
+    
+    func getBeer(name: String) -> Beer {
+        return beers.filter({ $0.name == name }).first!
+    }
+    
+    func getAllBeers() -> [Beer] {
+        return beers
+    }
     
     func sellBeer(_ beer: Beer) {
         beer.remainingVolume -= beer.sellQuantity

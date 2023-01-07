@@ -8,7 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
-    //MARK: Outlets
+    
+    //MARK: - Outlets
     @IBOutlet weak var firstBeerLabel: UILabel!
     @IBOutlet weak var secondBeerLabel: UILabel!
     @IBOutlet weak var thirdBeerLabel: UILabel!
@@ -17,46 +18,51 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdBeerQuantityLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     
-    //MARK: ViewDidLoad
+    //MARK: - let/var
+    let firstBeerName = BeerBrand.firstBeer.rawValue
+    let secondBeerName = BeerBrand.secondBeer.rawValue
+    let thirdBeerName = BeerBrand.thirdBeer.rawValue
+    
+    //MARK: - lifecycle funcs
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstBeerLabel.text = Manager.shared.beers[0].name
-        secondBeerLabel.text = Manager.shared.beers[1].name
-        thirdBeerLabel.text = Manager.shared.beers[2].name
+        firstBeerLabel.text = BeerBrand.firstBeer.rawValue
+        secondBeerLabel.text = BeerBrand.secondBeer.rawValue
+        thirdBeerLabel.text = BeerBrand.thirdBeer.rawValue
         firstBeerQuantityLabel.text = "0"
         secondBeerQuantityLabel.text = "0"
         thirdBeerQuantityLabel.text = "0"
         messageLabel.text = ""
     }
 
-    //MARK: IBActions
+    //MARK: - IBActions
     @IBAction func addFirstBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        firstBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.beers[0])
+        firstBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.getBeer(name: firstBeerName))
     }
     @IBAction func addSecondBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        secondBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.beers[1])
+        secondBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.getBeer(name: secondBeerName))
     }
     @IBAction func addThirdBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        thirdBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.beers[2])
+        thirdBeerQuantityLabel.text = Manager.shared.addBeer(Manager.shared.getBeer(name: thirdBeerName))
     }
     @IBAction func subtractFirstBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        firstBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.beers[0])
+        firstBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.getBeer(name: firstBeerName))
     }
     @IBAction func subtractSecondBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        secondBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.beers[1])
+        secondBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.getBeer(name: secondBeerName))
     }
     @IBAction func subtractThirdBeerButtonPressed(_ sender: UIButton) {
         messageLabel.text = ""
-        thirdBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.beers[2])
+        thirdBeerQuantityLabel.text = Manager.shared.subtractBeer(Manager.shared.getBeer(name: thirdBeerName))
     }
     @IBAction func sellButtonPressed(_ sender: UIButton) {
-        messageLabel.text = Manager.shared.createMessageLabelText(Manager.shared.beers)
+        messageLabel.text = Manager.shared.createMessageLabelText(Manager.shared.getAllBeers())
         Manager.shared.sell()
         firstBeerQuantityLabel.text = "0"
         secondBeerQuantityLabel.text = "0"
